@@ -9,22 +9,22 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
+//import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
+//import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+//import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+//import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
+//import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
+//import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
+//import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
+//import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
+//import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
+//import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
+//import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
+//import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -69,14 +69,13 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm .`,
+  name: `Hi, I'm Jure.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a climate modelling <strong className="text-stone-100">PhD student</strong>.
-      </p>
+        I'm a <strong className="text-stone-100">PhD student</strong> in climate science. </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, I enjoy doing this and that.
+        In my free time time, I enjoy reading adventure novels about tax policy.
       </p>
     </>
   ),
@@ -100,7 +99,11 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `I am a physicist and applied mathematician by education who began dabbling in climate science in 2020. Currently, I am a PhD student at the University of Cambridge, working on the representation of clouds in climate models. In my spare time, I enjoy exploring the intricacies of fiscal policy and economics. On less exciting days, you can find me outdoors, preferably surrounded by trees.`,
+  description: `I am a physicist & applied mathematician by education who began dabbling in climate in 2020. Currently, I am a PhD student 
+  at the University of Cambridge, working on the representation of convective clouds in climate models. Additionally, I am a part-time as a 
+  tutor at Cambridge Spark, where I teach basic data science. I also work part-time as an independent contractor for Google DeepMind, where 
+    I provide climate science data for conversational AI. In my spare time, I enjoy exploring the intricacies of fiscal policy and economics. 
+        On less exciting days, you can find me outdoors, preferably surrounded by trees.`,
   aboutItems: [
     {label: 'Location', text: 'Cambridge, UK', Icon: MapIcon},
     {label: 'Undergraduate', text: 'University of Glasgow', Icon: AcademicCapIcon},
@@ -117,8 +120,51 @@ export const aboutData: About = {
  * Skills section
  */
 export const skills: SkillGroup[] = [
+    {
+    name: 'Tools',
+    skills: [
+      {
+        name: 'Python',
+        level: 8,
+      },
+      {
+        name: 'Fortran',
+        level: 3,
+      },
+      {
+        name: 'Git',
+        level: 7,
+      },
+      {
+        name: 'Vim',
+        level: 6,
+      },
+      {
+        name: 'Linux',
+        level: 5,
+      },
+    ],
+  },
+
   {
-    name: 'Spoken languages',
+    name: 'Technical',
+    skills: [
+      {
+        name: 'Data analysis',
+        level: 10,
+      },
+      {
+        name: 'English',
+        level: 9,
+      },
+      {
+        name: 'German',
+        level: 2,
+      },
+    ],
+  },
+  {
+    name: 'Languages',
     skills: [
       {
         name: 'Slovenian',
@@ -133,58 +179,7 @@ export const skills: SkillGroup[] = [
         level: 2,
       },
     ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
-    ],
-  },
+  }
 ];
 
 /**
@@ -213,40 +208,41 @@ export const education: TimelineItem[] = [
     date: 'June 2021',
     location: 'University of Glasgow',
     title: 'MSci in Mathematics & Physics',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    content: <p>A Scottish special: joint degree! Thesis on percolation characteristics of systems with a barrier.</p>,
   },
   {
     date: 'September 2022',
     location: 'University of Cambridge',
     title: 'MPhil Geography',
-    content: <p>MPhil by research. Thesis: Impact of convection schemes in climate models.</p>,
+    content: <p>MPhil by research with a thesis on the impact of convection schemes in climate models.</p>,
   },
 ];
 
+
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'December 2022 - Present',
+    location: 'Cambridge Spark',
+    title: 'Teacher & tutor',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Teaching and tutoring Excel, Python, data science, and, on rare occasions, machine learning, 
+        to company clients- catering to a spectrum of learner expertise, ranging from complete beginners to advanced learners.
       </p>
     ),
   },
-  {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
-  },
+  //{
+    //date: 'May 2024 - Present',
+    //location: 'Google DeepMind',
+    //title: 'Expert AI tutor',
+    //content: (
+      //<p>
+        //I help provide conversational AI models with data on climate science by generating questions and evaluating responses. THen collaborating with engineers to improve model effectiveness and safety.
+      //</p>
+    //),
+  //},
 ];
+
 
 /**
  * Testimonial section
@@ -255,19 +251,14 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'Joe Bloggs',
+      text: 'Wow, so that',
+      //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
     {
       name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      text: 'Wow, so that',
+      //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
   ],
 };
@@ -278,7 +269,7 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Feel free to reach out to me in any way that suits you best!',
   items: [
     {
       type: ContactType.Email,
