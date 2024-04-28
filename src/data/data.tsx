@@ -59,7 +59,7 @@ export const SectionId = {
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
-  Testimonials: 'testimonials',
+  Testimonials: 'testimonial',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -73,7 +73,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a <strong className="text-stone-100">PhD student</strong> in climate science. </p>
+        I'm a <strong className="text-stone-100">PhD student</strong> working on climate models at the University of Cambridge. </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, I enjoy reading adventure novels about tax policy.
       </p>
@@ -99,11 +99,15 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `I am a physicist & applied mathematician by education who began dabbling in climate in 2020. Currently, I am a PhD student 
-  at the University of Cambridge, working on the representation of convective clouds in climate models. Additionally, I am a part-time as a 
-  tutor at Cambridge Spark, where I teach basic data science. I also work part-time as an independent contractor for Google DeepMind, where 
-    I provide climate science data for conversational AI. In my spare time, I enjoy exploring the intricacies of fiscal policy and economics. 
-        On less exciting days, you can find me outdoors, preferably surrounded by trees.`,
+    description: `I am a physicist & applied mathematician by education who began dabbling in climate 
+      science in 2020. Currently, I am a PhD student at the University of Cambridge, working on the representation of convective 
+      clouds in climate models. I am sponsored by Natural Environment Research Council and the UK Met Office.
+      
+      I work part-time as a teacher/tutor at Cambridge Spark, where I teach basic data 
+      science, and as an independent contractor for Google DeepMind, where I provide climate science data for conversational AI.
+
+      In my spare time, I enjoy exploring the intricacies of fiscal policy. On less exciting days, 
+      you can find me outdoors, preferably surrounded by trees.`,
   aboutItems: [
     {label: 'Location', text: 'Cambridge, UK', Icon: MapIcon},
     {label: 'Undergraduate', text: 'University of Glasgow', Icon: AcademicCapIcon},
@@ -111,7 +115,7 @@ export const aboutData: About = {
     {label: 'Postgraduate', text: 'University of Cambridge', Icon: AcademicCapIcon},
     {label: 'Nationality', text: 'Slovenia', Icon: FlagIcon},
     {label: 'Part-time', text: 'Cambridge Spark', Icon: BuildingOffice2Icon},
-    {label: 'Interests', text: 'Nature, fiscal policy, sailing, surfing', Icon: SparklesIcon},
+    {label: 'Interests', text: 'Nature, sailing, surfing', Icon: SparklesIcon},
     {label: 'Independent contractor', text: 'Google DeepMind', Icon: BuildingOffice2Icon},
   ],
 };
@@ -128,16 +132,8 @@ export const skills: SkillGroup[] = [
         level: 8,
       },
       {
-        name: 'Fortran',
-        level: 3,
-      },
-      {
         name: 'Git',
         level: 7,
-      },
-      {
-        name: 'Vim',
-        level: 6,
       },
       {
         name: 'Linux',
@@ -145,34 +141,16 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
-
-  {
-    name: 'Technical',
-    skills: [
-      {
-        name: 'Data analysis',
-        level: 10,
-      },
-      {
-        name: 'English',
-        level: 9,
-      },
-      {
-        name: 'German',
-        level: 2,
-      },
-    ],
-  },
   {
     name: 'Languages',
     skills: [
       {
-        name: 'Slovenian',
-        level: 10,
-      },
-      {
         name: 'English',
         level: 9,
+      },
+      {
+        name: 'Slovenian',
+        level: 10,
       },
       {
         name: 'German',
@@ -187,15 +165,15 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://.com',
+    title: 'Cloud identification: code',
+    description: 'Cloud identification project for LES data.',
+    url: 'https://github.com/jurezgubic/CloudTracking',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://.com',
+    title: 'Cloud identification: sample result',
+    description: 'Sample result of cloud identification code on RICO LES data.',
+    url: 'https://github.com/jurezgubic/CloudTracking',
     image: porfolioImage2,
   },
 ];
@@ -208,13 +186,13 @@ export const education: TimelineItem[] = [
     date: 'June 2021',
     location: 'University of Glasgow',
     title: 'MSci in Mathematics & Physics',
-    content: <p>A Scottish special: joint degree! Thesis on percolation characteristics of systems with a barrier.</p>,
+    content: <p>A Scottish special: joint degree! Thesis on the percolation characteristics of systems with a barrier.</p>,
   },
   {
     date: 'September 2022',
     location: 'University of Cambridge',
     title: 'MPhil Geography',
-    content: <p>MPhil by research with a thesis on the impact of convection schemes in climate models.</p>,
+    content: <p>MPhil by research. Thesis on the impact of convection schemes in climate models.</p>,
   },
 ];
 
@@ -231,16 +209,16 @@ export const experience: TimelineItem[] = [
       </p>
     ),
   },
-  //{
-    //date: 'May 2024 - Present',
-    //location: 'Google DeepMind',
-    //title: 'Expert AI tutor',
-    //content: (
-      //<p>
-        //I help provide conversational AI models with data on climate science by generating questions and evaluating responses. THen collaborating with engineers to improve model effectiveness and safety.
-      //</p>
-    //),
-  //},
+  {
+    date: 'May 2024 - Present',
+    location: 'Google DeepMind',
+    title: 'Expert AI tutor',
+    content: (
+      <p>
+        I help provide conversational AI models with data on climate science by generating questions, evaluating responses and collaborating with engineers to improve model effectiveness.
+      </p>
+    ),
+  },
 ];
 
 
@@ -251,17 +229,13 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'Joe Bloggs',
-      text: 'Wow, so that',
-      //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Wow, so that',
-      //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      name: 'John Doe',
+      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
+      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
   ],
 };
+
 
 /**
  * Contact section
