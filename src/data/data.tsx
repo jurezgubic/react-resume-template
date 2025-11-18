@@ -230,6 +230,10 @@ export const testimonial: TestimonialSection = {
       name: 'Grandma',
       text: "They don't make them like that anymore.",
     },
+    {
+      name: 'Arla Skyr division',
+      text: "Thank you! (probably)",
+    },
   ],
 };
 
